@@ -1,0 +1,15 @@
+<apex:page controller="TeacherController" action="{!fetchRecord}">
+<apex:form >
+<apex:repeat value="{!listTeachers}" var="i">
+    {!i.Id} {!i.Name} {!i.teacher_name__c}
+    <!--<a href="/apex/newPage?Id={!i.Id}"> edit </a>-->
+    <apex:commandLink action="{!edit}" value="edit">
+    <apex:param name="asd" value="{!i.Id}" assignTo="{!recid}"/>
+    </apex:commandLink>
+    <br/> 
+    
+</apex:repeat>
+
+
+ </apex:form>
+</apex:page>

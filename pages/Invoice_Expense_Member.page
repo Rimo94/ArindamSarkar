@@ -1,0 +1,46 @@
+<apex:page sidebar="false" standardController="Expense_Member__c"  renderAs="pdf" >
+
+       <apex:pageBlock >
+      
+    <apex:form >
+    <table>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:pageMessages >
+                </apex:pageMessages>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>  
+       
+      <apex:pageBlockSection >
+          <apex:pageBlockSectionItem >
+              <apex:outputText value="Member Name : ">
+              </apex:outputText><apex:OutputText value="{!Expense_Member__c.Member__r.Name__c}"></apex:OutputText>
+          </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      
+       <apex:pageBlockSection >
+          <apex:pageBlockSectionItem >
+              <apex:outputText value="Contributed Amount : ">
+              </apex:outputText><apex:OutputText value="{!Expense_Member__c.Contribution_Amount__c}"></apex:OutputText>
+          </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+      <apex:pageBlockSection >
+          <apex:pageBlockSectionItem >
+              <apex:outputText value="Expense : ">
+              </apex:outputText><apex:OutputText value="{!Expense_Member__c.Expense__r.Amount__c}"></apex:OutputText>
+          </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+       
+      <apex:pageBlockSection >
+          <apex:pageBlockSectionItem >
+            <apex:commandLink />
+          </apex:pageBlockSectionItem>
+       </apex:pageBlockSection>
+     </table>
+    </apex:form>
+   </apex:pageBlock>
+    
+
+<!--  -->
+
+</apex:page>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>member_email_templete</name>
+    <style>none</style>
+    <subject>Reimbursement for  {!Expense_Member__c.Expense__c}</subject>
+    <type>text</type>
+</EmailTemplate>

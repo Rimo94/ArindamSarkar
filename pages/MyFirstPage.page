@@ -1,0 +1,103 @@
+<apex:page standardController="Student__c" extensions="FirstExtension">
+
+
+    <apex:pageBlock title="Student">
+    
+        <apex:form >
+                    
+           
+         <apex:pageBlockSection > 
+                  
+                       
+             <apex:pageBlockSection >
+             
+                
+             
+                    <apex:pageBlockSectionItem >
+                          First Name   : <apex:inputtext value="{!firstName}"/>
+                     </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                          Last Name : <apex:inputText value="{!lastName}"/>
+                    </apex:pageBlockSectionItem>
+                    
+                    
+             </apex:pageBlockSection>
+                
+            
+            
+            
+            <apex:pageBlockSection >
+                
+                  <apex:pageBlockSectionItem >
+              
+                      
+              
+                            Date of Birth : <apex:inputField value="{!Student__c.DOB__c}" />
+                            
+                    
+                </apex:pageBlockSectionItem>
+                
+                
+               
+                
+                <apex:pageBlockSectionItem >
+                
+                           Teachers Name: <apex:inputField value="{!Student__c.Teacher_relation__c}" />
+                           
+                           
+                </apex:pageBlockSectionItem>
+                
+             
+                
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection >
+            
+                            <apex:pageBlockSectionItem >
+                            
+                                    City : <apex:inputField value="{!Student__c.City__c}"/>
+                            
+                            </apex:pageBlockSectionItem>
+                            
+                            <apex:pageBlockSectionItem >
+                            
+                                   State: <apex:inputField value="{!Student__c.State__c}"/>
+                            
+                            </apex:pageBlockSectionItem>
+            
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection >
+                
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton action="{!save}" value="Save" styleClass="center"/>
+                </apex:pageBlockSectionItem>
+                
+            </apex:pageBlockSection>
+           
+           <apex:pageBlockSection >
+                
+                <apex:pageBlockSectionItem >
+                    <!-- 
+                    To display all the page messages(Like: Error/Success)
+                    -->
+                    <apex:pageMessages >
+                    </apex:pageMessages>
+                    
+                </apex:pageBlockSectionItem>
+                
+                  
+             </apex:pageBlockSection>      
+           
+           
+           
+            
+            </apex:pageBlockSection>
+            
+        </apex:form>
+        
+    </apex:pageBlock>
+    
+    
+</apex:page>

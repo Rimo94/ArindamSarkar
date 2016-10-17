@@ -1,0 +1,35 @@
+<apex:page standardController="Expense__c" renderAs="pdf" extensions="ExpenseEXT" >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1 style="color:#4A148C; text-align: center;">REIMBURSEMENT INVOICE</h1>
+  <p style="font:20px;">Expense During <span style="color:#FF6D00;" >{!Expense__c.Event__c}</span> on {!Expense__c.Date__c}</p>
+  <html>
+        <head/>
+        <body>
+            <table border="4"  width="600px" Class="center" >
+              <tr>
+                 <td style="color:#DD2C00;">TOTAL AMOUNT</td>
+                 <td>{!Expense__c.Amount__c}</td>
+              </tr>
+              <tr>
+                    <td style="color:#DD2C00;">EVENT DATE</td>
+                    <td>{!Expense__c.Date__c} </td>
+              </tr>
+              <tr>
+                    <td style="color:#DD2C00;">EVENT</td>
+                    <td>{!Expense__c.Event__c}</td>
+              </tr>
+             
+              
+            
+            </table> 
+            
+            Members Are:<br/>
+            <apex:repeat value="{!memExp}" var="i">
+                    {!i.Member__r.Name__c} Amount:
+                    <span style="color:#E91E63">{!i.Contribution_Amount__c}</span>
+                    <br/>
+                    
+            </apex:repeat>     
+        </body>
+    </html>
+    </apex:page>

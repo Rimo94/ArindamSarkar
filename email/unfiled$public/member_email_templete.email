@@ -1,0 +1,3 @@
+hi {!Member__c.Name__c}
+
+your {!Expense__c.Amount__c} Reimbursement to your Account.

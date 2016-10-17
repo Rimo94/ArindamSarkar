@@ -1,0 +1,31 @@
+<messaging:emailTemplate subject="Re:Work Email" recipientType="User" relatedToType="Expense_Member__c">
+<messaging:attachment renderAs="PDF" filename="Member Invoice.pdf">
+    <html>
+        <head>
+          
+        </head>
+        <body>
+           <h3>  Thank you for your Contribution {!relatedTo.Member__r.Name__c} </h3> 
+            <h4> This is your Invoice </h4>
+            <table border="2"  width="600px" Class="center" >
+                
+                <tr>
+                    <td>Event Name</td>
+                    <td>{!relatedTo.Expense__r.Event__c} </td>
+                </tr>
+                <tr>
+                    <td>Total Event cost</td>
+                    <td>{!relatedTo.Expense__r.Amount__c} </td>
+                </tr>
+                <tr>
+                    <td>Contribution Amount</td>
+                    <td>{!relatedTo.Contribution_Amount__c} </td>
+                </tr>
+            </table>     
+        </body>
+    </html>
+</messaging:attachment>
+<messaging:plainTextEmailBody >
+
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>
